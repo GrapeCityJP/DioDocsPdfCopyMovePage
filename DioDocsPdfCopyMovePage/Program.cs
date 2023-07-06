@@ -8,8 +8,8 @@ var fs = new FileStream("diodocs_a4_full.pdf", FileMode.Open);
 var doc1 = new GcPdfDocument();
 doc1.Load(fs);
 
-// 1ページ目をコピー
-doc1.Pages.ClonePage(0, 0, true, true);
+// 1ページ目を3ページ目にコピー
+doc1.Pages.ClonePage(0, 2, true, true);
 
 doc1.Save("ClonePage.pdf");
     
